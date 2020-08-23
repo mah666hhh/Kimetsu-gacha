@@ -15,9 +15,20 @@ var __extends = (this && this.__extends) || (function () {
 exports.__esModule = true;
 var react_1 = require("react");
 var react_bootstrap_1 = require("react-bootstrap");
-var aqua_1 = require("./components/lists/aqua");
-var flower_1 = require("./components/lists/flower");
 var Rolling_1_3s_21px_gif_1 = require("./Rolling-1.3s-21px.gif");
+var aqua_1 = require("./components/lists/aqua");
+var beast_1 = require("./components/lists/beast");
+var flare_1 = require("./components/lists/flare");
+var flower_1 = require("./components/lists/flower");
+var insect_1 = require("./components/lists/insect");
+var lightning_1 = require("./components/lists/lightning");
+var love_1 = require("./components/lists/love");
+var mist_1 = require("./components/lists/mist");
+var moon_1 = require("./components/lists/moon");
+var rock_1 = require("./components/lists/rock");
+var snake_1 = require("./components/lists/snake");
+var sound_1 = require("./components/lists/sound");
+var wind_1 = require("./components/lists/wind");
 //* React.Component の型引数は <Props, State>
 //* 空の場合は {} にする
 var KimetsuTop = /** @class */ (function (_super) {
@@ -26,7 +37,21 @@ var KimetsuTop = /** @class */ (function (_super) {
         var _this = _super.call(this, props) // これはおまじない
          || this;
         _this.state = {
-            techniques: [aqua_1["default"], flower_1["default"]],
+            techniques: [
+                aqua_1["default"],
+                beast_1["default"],
+                flare_1["default"],
+                flower_1["default"],
+                insect_1["default"],
+                lightning_1["default"],
+                love_1["default"],
+                mist_1["default"],
+                moon_1["default"],
+                rock_1["default"],
+                snake_1["default"],
+                sound_1["default"],
+                wind_1["default"],
+            ],
             isShow: false,
             isModalOpen: false,
             gachaBtnText: 'ガチャを回す',
@@ -39,6 +64,7 @@ var KimetsuTop = /** @class */ (function (_super) {
         // TODO: クラスコンポーネントの中では使えない
         // const [gachaBtnText, setGachaBtnText] = useState('ガチャを回す');
         var _this = this;
+        //******************************* functions
         var handleOpenModal = function () {
             _this.setState({
                 loadingIconPath: '',
@@ -103,14 +129,15 @@ var KimetsuTop = /** @class */ (function (_super) {
             url = url + '%0a%0a鬼滅の刃 1〜20巻セット↓%0ahttps://amzn.to/31jI7D7%0a%0aガチャを回してみる↓';
             window.open(url, '_blank', 'width=600,height=300');
         };
-        //******************* styles
+        //******************************* functions
+        //******************************* styles
         var adjastCenter = {
             textAlign: 'center'
         };
         var adjastModalFooter = {
             justifyContent: 'center'
         };
-        //******************* styles
+        //******************************* styles
         return (react_1["default"].createElement("div", { style: adjastCenter },
             react_1["default"].createElement("br", null),
             react_1["default"].createElement("br", null),

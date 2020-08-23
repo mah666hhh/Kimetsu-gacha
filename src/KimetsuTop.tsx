@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import Aqua from './components/lists/aqua';
-import Flower from './components/lists/flower';
 import LoadingIconPath from './Rolling-1.3s-21px.gif';
+import Aqua from './components/lists/aqua';
+import Beast from './components/lists/beast';
+import Flare from './components/lists/flare';
+import Flower from './components/lists/flower';
+import Insect from './components/lists/insect';
+import Lightning from './components/lists/lightning';
+import Love from './components/lists/love';
+import Mist from './components/lists/mist';
+import Moon from './components/lists/moon';
+import Rock from './components/lists/rock';
+import Snake from './components/lists/snake';
+import Sound from './components/lists/sound';
+import Wind from './components/lists/wind';
+import Sun from './components/lists/sun';
 
 //* TypeScriptの場合、stateで使う型を定義しておく必要がある
 // http://itexplorer.hateblo.jp/entry/20170715-react-tutorial-intrinsic-attributes-error
@@ -20,11 +32,26 @@ class KimetsuTop extends Component<{}, Kimetsu> {
   constructor(props: any) {
     super(props) // これはおまじない
     this.state = {
-      techniques: [Aqua, Flower],
+      techniques: [
+        Aqua,
+        Beast,
+        Flare,
+        Flower,
+        Insect,
+        Lightning,
+        Love,
+        Mist,
+        Moon,
+        Rock,
+        Snake,
+        Sound,
+        Wind,
+        // Sun, // TODO: 日の呼吸はXXXノ型 がないので呼び出し時には注意
+      ],
       isShow: false,
       isModalOpen: false,
       gachaBtnText: 'ガチャを回す',
-      loadingIconPath: ''
+      loadingIconPath: '',
     };
   }
 
@@ -33,6 +60,7 @@ class KimetsuTop extends Component<{}, Kimetsu> {
     // TODO: クラスコンポーネントの中では使えない
     // const [gachaBtnText, setGachaBtnText] = useState('ガチャを回す');
 
+    //******************************* functions
     const handleOpenModal = () => {
       this.setState({
         loadingIconPath: '',
@@ -60,7 +88,6 @@ class KimetsuTop extends Component<{}, Kimetsu> {
         Math.floor(Math.random() * targets.length)
       ];
     }
-
 
     // ツイートボタンを表示
     // const executeGacha = () => {
@@ -117,8 +144,10 @@ class KimetsuTop extends Component<{}, Kimetsu> {
       url = url + '%0a%0a鬼滅の刃 1〜20巻セット↓%0ahttps://amzn.to/31jI7D7%0a%0aガチャを回してみる↓';
       window.open(url, '_blank', 'width=600,height=300');
     }
+    //******************************* functions
 
-    //******************* styles
+
+    //******************************* styles
     const adjastCenter = {
       textAlign: 'center' as 'center',
       //  as 'center' がないと動かない
@@ -128,7 +157,7 @@ class KimetsuTop extends Component<{}, Kimetsu> {
     const adjastModalFooter = {
       justifyContent: 'center'
     }
-    //******************* styles
+    //******************************* styles
 
     return (
       <div style={adjastCenter}>
