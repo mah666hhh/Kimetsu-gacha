@@ -6,9 +6,7 @@ interface Flower {
 const flower: Flower = {
   breath: '花',
   techniques: [
-    // '壱ノ型',
-    '弐ノ型御影梅',
-    // '参ノ型',
+    '弐ノ型:御影梅',
     '肆ノ型:紅花衣',
     '伍ノ型:徒の芍薬',
     '陸ノ型:渦桃',
