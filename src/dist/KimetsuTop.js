@@ -125,7 +125,7 @@ var KimetsuTop = /** @class */ (function (_super) {
                     backgroundColor: '#00BFFF',
                     outlineColor: '#00BFFF',
                     borderColor: '#00BFFF'
-                }, onClick: handleOpenResultModal }, this.state.loadingIconPath ? (react_1["default"].createElement("img", { src: Rolling_1_3s_21px_gif_1["default"], alt: "" })) : ('ガチャを回す')),
+                }, onClick: handleOpenResultModal }, this.state.loadingIconPath ? (react_1["default"].createElement("img", { src: Rolling_1_3s_21px_gif_1["default"], alt: "\u30AC\u30C1\u30E3\u3092\u56DE\u3059" })) : ('ガチャを回す')),
             this.state.isModalOpen && (react_1["default"].createElement(react_bootstrap_1.Modal, { show: true, onHide: handleCloseModal, animation: true },
                 react_1["default"].createElement(react_bootstrap_1.Modal.Header, { style: { justifyContent: 'center' } },
                     react_1["default"].createElement("h5", null, "\u4ECA\u65E5\u306E\u3042\u306A\u305F\u306E\u547C\u5438\u306F\u30FB\u30FB\u30FB\uFF01\uFF1F")),

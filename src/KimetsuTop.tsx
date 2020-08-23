@@ -154,7 +154,7 @@ class KimetsuTop extends Component<{}, Kimetsu> {
           onClick={handleOpenResultModal}
         >
           {this.state.loadingIconPath ? (
-            <img src={LoadingIconPath} alt="" />
+            <img src={LoadingIconPath} alt="ガチャを回す" />
           ) : (
             'ガチャを回す'
           )}
