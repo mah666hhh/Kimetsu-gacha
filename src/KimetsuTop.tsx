@@ -1,8 +1,8 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import Aqua from './components/lists/aqua';
 import Flower from './components/lists/flower';
-import LoadingIconPath from './Rolling-1s-21px.gif';
+import LoadingIconPath from './Rolling-1.3s-21px.gif';
 
 //* TypeScriptの場合、stateで使う型を定義しておく必要がある
 // http://itexplorer.hateblo.jp/entry/20170715-react-tutorial-intrinsic-attributes-error
@@ -134,32 +134,51 @@ class KimetsuTop extends Component<{}, Kimetsu> {
       <div style={adjastCenter}>
         <br />
         <br />
-        <h1>鬼滅の刃 〜今日の呼吸ガチャ〜</h1>
+        <h1>
+          鬼滅の刃
+          <br />
+          〜今日の呼吸ガチャ〜
+        </h1>
         <br />
         <br />
 
         {/* ボタンのフォーカスが残るのはchromeの仕様 */}
         {/* https://github.com/react-bootstrap/react-bootstrap/issues/1300#issuecomment-138422171 */}
-        <Button variant="success" onClick={handleOpenResultModal}>
+        <Button
+          style={{
+            fontWeight: 'bold',
+            backgroundColor: '#00BFFF',
+            outlineColor: '#00BFFF',
+            borderColor: '#00BFFF',
+          }}
+          onClick={handleOpenResultModal}
+        >
           {this.state.loadingIconPath ? (
             <img src={LoadingIconPath} alt="" />
           ) : (
             'ガチャを回す'
           )}
         </Button>
-        <br />
-        <br />
-        <br />
         {this.state.isModalOpen && (
           <Modal show={true} onHide={handleCloseModal} animation={true}>
-            <Modal.Header>
-              <h3>今日のあなたの呼吸は・・・！？</h3>
+            <Modal.Header style={{ justifyContent: 'center' }}>
+              <h5>今日のあなたの呼吸は・・・！？</h5>
             </Modal.Header>
             <Modal.Footer style={adjastModalFooter}>
-              <Button variant="secondary" size="sm" onClick={handleCloseModal}>
+              <Button
+                size="sm"
+                style={{ fontWeight: 'bold' }}
+                variant="secondary"
+                onClick={handleCloseModal}
+              >
                 閉じる
               </Button>
-              <Button size="sm" onClick={executeTweet}>
+
+              <Button
+                size="sm"
+                style={{ fontWeight: 'bold' }}
+                onClick={executeTweet}
+              >
                 ツイッターで結果を見る
               </Button>
             </Modal.Footer>

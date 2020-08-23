@@ -17,7 +17,7 @@ var react_1 = require("react");
 var react_bootstrap_1 = require("react-bootstrap");
 var aqua_1 = require("./components/lists/aqua");
 var flower_1 = require("./components/lists/flower");
-var Rolling_1s_21px_gif_1 = require("./Rolling-1s-21px.gif");
+var Rolling_1_3s_21px_gif_1 = require("./Rolling-1.3s-21px.gif");
 //* React.Component の型引数は <Props, State>
 //* 空の場合は {} にする
 var KimetsuTop = /** @class */ (function (_super) {
@@ -48,7 +48,7 @@ var KimetsuTop = /** @class */ (function (_super) {
         };
         var handleOpenResultModal = function () {
             _this.setState({
-                loadingIconPath: Rolling_1s_21px_gif_1["default"]
+                loadingIconPath: Rolling_1_3s_21px_gif_1["default"]
             });
             setTimeout(function () { handleOpenModal(); }, 1000);
         };
@@ -114,19 +114,24 @@ var KimetsuTop = /** @class */ (function (_super) {
         return (react_1["default"].createElement("div", { style: adjastCenter },
             react_1["default"].createElement("br", null),
             react_1["default"].createElement("br", null),
-            react_1["default"].createElement("h1", null, "\u9B3C\u6EC5\u306E\u5203 \u301C\u4ECA\u65E5\u306E\u547C\u5438\u30AC\u30C1\u30E3\u301C"),
+            react_1["default"].createElement("h1", null,
+                "\u9B3C\u6EC5\u306E\u5203",
+                react_1["default"].createElement("br", null),
+                "\u301C\u4ECA\u65E5\u306E\u547C\u5438\u30AC\u30C1\u30E3\u301C"),
             react_1["default"].createElement("br", null),
             react_1["default"].createElement("br", null),
-            react_1["default"].createElement(react_bootstrap_1.Button, { variant: "success", onClick: handleOpenResultModal }, this.state.loadingIconPath ? (react_1["default"].createElement("img", { src: Rolling_1s_21px_gif_1["default"], alt: "" })) : ('ガチャを回す')),
-            react_1["default"].createElement("br", null),
-            react_1["default"].createElement("br", null),
-            react_1["default"].createElement("br", null),
+            react_1["default"].createElement(react_bootstrap_1.Button, { style: {
+                    fontWeight: 'bold',
+                    backgroundColor: '#00BFFF',
+                    outlineColor: '#00BFFF',
+                    borderColor: '#00BFFF'
+                }, onClick: handleOpenResultModal }, this.state.loadingIconPath ? (react_1["default"].createElement("img", { src: Rolling_1_3s_21px_gif_1["default"], alt: "" })) : ('ガチャを回す')),
             this.state.isModalOpen && (react_1["default"].createElement(react_bootstrap_1.Modal, { show: true, onHide: handleCloseModal, animation: true },
-                react_1["default"].createElement(react_bootstrap_1.Modal.Header, null,
-                    react_1["default"].createElement("h3", null, "\u4ECA\u65E5\u306E\u3042\u306A\u305F\u306E\u547C\u5438\u306F\u30FB\u30FB\u30FB\uFF01\uFF1F")),
+                react_1["default"].createElement(react_bootstrap_1.Modal.Header, { style: { justifyContent: 'center' } },
+                    react_1["default"].createElement("h5", null, "\u4ECA\u65E5\u306E\u3042\u306A\u305F\u306E\u547C\u5438\u306F\u30FB\u30FB\u30FB\uFF01\uFF1F")),
                 react_1["default"].createElement(react_bootstrap_1.Modal.Footer, { style: adjastModalFooter },
-                    react_1["default"].createElement(react_bootstrap_1.Button, { variant: "secondary", size: "sm", onClick: handleCloseModal }, "\u9589\u3058\u308B"),
-                    react_1["default"].createElement(react_bootstrap_1.Button, { size: "sm", onClick: executeTweet }, "\u30C4\u30A4\u30C3\u30BF\u30FC\u3067\u7D50\u679C\u3092\u898B\u308B")))),
+                    react_1["default"].createElement(react_bootstrap_1.Button, { size: "sm", style: { fontWeight: 'bold' }, variant: "secondary", onClick: handleCloseModal }, "\u9589\u3058\u308B"),
+                    react_1["default"].createElement(react_bootstrap_1.Button, { size: "sm", style: { fontWeight: 'bold' }, onClick: executeTweet }, "\u30C4\u30A4\u30C3\u30BF\u30FC\u3067\u7D50\u679C\u3092\u898B\u308B")))),
             this.state.isShow && (react_1["default"].createElement(react_bootstrap_1.Button, { onClick: executeTweet }, "\u30C4\u30A4\u30FC\u30C8\u3059\u308B")),
             react_1["default"].createElement("br", null),
             react_1["default"].createElement("br", null),
