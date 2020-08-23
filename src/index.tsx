@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-import App from './App';
+import KimetsuTop from './KimetsuTop';
 import * as serviceWorker from './serviceWorker';
 
+// TODO: ここから public / index.htmlのrootにDOMを差込む
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <KimetsuTop />,
   document.getElementById('root')
 );
 
