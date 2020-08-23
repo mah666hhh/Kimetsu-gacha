@@ -46,7 +46,7 @@ class KimetsuTop extends Component<{}, Kimetsu> {
         Snake,
         Sound,
         Wind,
-        // Sun, // TODO: 日の呼吸はXXXノ型 がないので呼び出し時には注意
+        Sun,
       ],
       isShow: false,
       isModalOpen: false,
@@ -122,11 +122,13 @@ class KimetsuTop extends Component<{}, Kimetsu> {
       let url: string;
       let selectedTechnique: any = selectOneAtRandom(this.state.techniques);
 
-      const [nunmberOfType, technique]: string[] = selectOneAtRandom(
+      const [numberOfType, technique]: string[] = selectOneAtRandom(
         selectedTechnique.techniques
       ).split(':');
 
-      let str: string = `今日の私の呼吸は...%0a%0a「全集中！ ${selectedTechnique.breath}の呼吸...」%0a%0a「${nunmberOfType}！」%0a%0a「${technique}！！！」`;
+      // ヒノカミ神楽の場合は、型は表示しない
+      let str: string = `今日の私の呼吸は...%0a%0a「全集中！${selectedTechnique.breath !== '日' ? `${selectedTechnique.breath}の呼吸...」%0a%0a「${numberOfType}！」` : '」%0a%0a「ヒノカミ神楽！」'} %0a%0a「${technique}！！！」`;
+
       const appUrl: string = 'https://kimetsu-gacha.firebaseapp.com/';
 
       if (str.length > 140) {

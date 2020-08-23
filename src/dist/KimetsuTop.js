@@ -29,6 +29,7 @@ var rock_1 = require("./components/lists/rock");
 var snake_1 = require("./components/lists/snake");
 var sound_1 = require("./components/lists/sound");
 var wind_1 = require("./components/lists/wind");
+var sun_1 = require("./components/lists/sun");
 //* React.Component の型引数は <Props, State>
 //* 空の場合は {} にする
 var KimetsuTop = /** @class */ (function (_super) {
@@ -51,6 +52,7 @@ var KimetsuTop = /** @class */ (function (_super) {
                 snake_1["default"],
                 sound_1["default"],
                 wind_1["default"],
+                sun_1["default"],
             ],
             isShow: false,
             isModalOpen: false,
@@ -112,8 +114,9 @@ var KimetsuTop = /** @class */ (function (_super) {
         var executeTweet = function () {
             var url;
             var selectedTechnique = selectOneAtRandom(_this.state.techniques);
-            var _a = selectOneAtRandom(selectedTechnique.techniques).split(':'), nunmberOfType = _a[0], technique = _a[1];
-            var str = "\u4ECA\u65E5\u306E\u79C1\u306E\u547C\u5438\u306F...%0a%0a\u300C\u5168\u96C6\u4E2D\uFF01 " + selectedTechnique.breath + "\u306E\u547C\u5438...\u300D%0a%0a\u300C" + nunmberOfType + "\uFF01\u300D%0a%0a\u300C" + technique + "\uFF01\uFF01\uFF01\u300D";
+            var _a = selectOneAtRandom(selectedTechnique.techniques).split(':'), numberOfType = _a[0], technique = _a[1];
+            // ヒノカミ神楽の場合は、型は表示しない
+            var str = "\u4ECA\u65E5\u306E\u79C1\u306E\u547C\u5438\u306F...%0a%0a\u300C\u5168\u96C6\u4E2D\uFF01" + (selectedTechnique.breath !== '日' ? selectedTechnique.breath + "\u306E\u547C\u5438...\u300D%0a%0a\u300C" + numberOfType + "\uFF01\u300D" : '」%0a%0a「ヒノカミ神楽！」') + " %0a%0a\u300C" + technique + "\uFF01\uFF01\uFF01\u300D";
             var appUrl = 'https://kimetsu-gacha.firebaseapp.com/';
             if (str.length > 140) {
                 return alert("テキストが140字を超えています");
