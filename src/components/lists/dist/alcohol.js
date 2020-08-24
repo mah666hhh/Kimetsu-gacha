@@ -1,12 +1,6 @@
 "use strict";
 exports.__esModule = true;
-var aqua = {
-    master: [
-        '竈門炭治郎',
-        '冨岡義勇',
-        '鱗滝左近次',
-        '村田'
-    ],
+var alcohol = {
     breath: '水',
     techniques: [
         '壱ノ型:水面切り',
@@ -22,4 +16,4 @@ var aqua = {
         '拾壱ノ型:凪',
     ]
 };
-exports["default"] = aqua;
+exports["default"] = alcohol;

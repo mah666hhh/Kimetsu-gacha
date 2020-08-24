@@ -1,6 +1,9 @@
 "use strict";
 exports.__esModule = true;
 var insect = {
+    master: [
+        '胡蝶しのぶ'
+    ],
     breath: '蟲',
     techniques: [
         '蝶ノ舞:戯れ',

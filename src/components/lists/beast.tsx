@@ -1,9 +1,13 @@
 interface Beast {
+  master: string[],
   breath: string,
   techniques: string[],
 }
 
 const beast: Beast = {
+  master: [
+    '嘴平伊之助'
+  ],
   breath: '獣',
   techniques: [
     '壱ノ牙:穿ち抜き',

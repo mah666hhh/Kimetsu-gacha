@@ -1,16 +1,9 @@
-interface Aqua {
-  master: string[],
-  breath: string,
-  techniques: string[],
+interface Alcohol {
+  breath: string;
+  techniques: string[];
 }
 
-const aqua: Aqua = {
-  master: [
-    '竈門炭治郎',
-    '冨岡義勇',
-    '鱗滝左近次',
-    '村田'
-  ],
+const alcohol: Alcohol = {
   breath: '水',
   techniques: [
     '壱ノ型:水面切り',
@@ -27,4 +20,4 @@ const aqua: Aqua = {
   ],
 };
 
-export default aqua;
+export default alcohol;

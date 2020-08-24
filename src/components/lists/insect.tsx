@@ -1,9 +1,13 @@
 interface Insect {
+  master: string[],
   breath: string;
   techniques: string[];
 }
 
 const insect: Insect = {
+  master: [
+    '胡蝶しのぶ'
+  ],
   breath: '蟲',
   techniques: [
     '蝶ノ舞:戯れ',

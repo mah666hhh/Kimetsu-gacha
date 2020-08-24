@@ -1,6 +1,9 @@
 "use strict";
 exports.__esModule = true;
 var mist = {
+    master: [
+        '時透無一郎'
+    ],
     breath: '霞',
     techniques: [
         '壱ノ型:垂天遠霞',

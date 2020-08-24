@@ -1,9 +1,13 @@
 interface Wind {
+  master: string[],
   breath: string,
   techniques: string[],
 }
 
 const wind: Wind = {
+  master: [
+    '不死川実弥'
+  ],
   breath: '風',
   techniques: [
     '壱ノ型:塵旋風・削ぎ',

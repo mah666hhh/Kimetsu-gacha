@@ -116,7 +116,9 @@ var KimetsuTop = /** @class */ (function (_super) {
             var selectedTechnique = selectOneAtRandom(_this.state.techniques);
             var _a = selectOneAtRandom(selectedTechnique.techniques).split(':'), numberOfType = _a[0], technique = _a[1];
             // ヒノカミ神楽の場合は、型は表示しない
-            var str = "\u4ECA\u65E5\u306E\u79C1\u306E\u547C\u5438\u306F...%0a%0a\u300C\u5168\u96C6\u4E2D\uFF01" + (selectedTechnique.breath !== '日' ? selectedTechnique.breath + "\u306E\u547C\u5438...\u300D%0a%0a\u300C" + numberOfType + "\uFF01\u300D" : '」%0a%0a「ヒノカミ神楽！」') + " %0a%0a\u300C" + technique + "\uFF01\uFF01\uFF01\u300D";
+            var str = "\u4ECA\u65E5\u306E\u79C1\u306E\u547C\u5438\u306F...%0a%0a\u300C\u5168\u96C6\u4E2D\uFF01" + (selectedTechnique.breath !== '日'
+                ? selectedTechnique.breath + "\u306E\u547C\u5438...\u300D%0a%0a\u300C" + numberOfType + "\uFF01\u300D"
+                : "\u300D%0a%0a\u300C" + selectedTechnique.breath + "\uFF01\u300D") + " %0a%0a\u300C" + technique + "\uFF01\uFF01\uFF01\u300D%0a%0a (" + selectedTechnique.breath + "\u306E\u547C\u5438\u306E\u4F7F\u3044\u624B\u306F\u3001" + selectedTechnique.master + ")";
             var appUrl = 'https://kimetsu-gacha.firebaseapp.com/';
             if (str.length > 140) {
                 return alert("テキストが140字を超えています");

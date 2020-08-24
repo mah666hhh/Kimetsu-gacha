@@ -1,6 +1,9 @@
 "use strict";
 exports.__esModule = true;
 var love = {
+    master: [
+        '甘露寺蜜璃'
+    ],
     breath: '恋',
     techniques: [
         '壱ノ型:初恋のわななき',

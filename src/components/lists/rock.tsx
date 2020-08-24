@@ -1,9 +1,13 @@
 interface Rock {
+  master: string[],
   breath: string;
   techniques: string[];
 }
 
 const rock: Rock = {
+  master: [
+    '悲鳴嶼行冥'
+  ],
   breath: '岩',
   techniques: [
     '壱ノ型:蛇紋岩・双極',

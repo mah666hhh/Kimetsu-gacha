@@ -1,9 +1,13 @@
 interface Mist {
+  master: string[],
   breath: string;
   techniques: string[];
 }
 
 const mist: Mist = {
+  master: [
+    '時透無一郎'
+  ],
   breath: '霞',
   techniques: [
     '壱ノ型:垂天遠霞',

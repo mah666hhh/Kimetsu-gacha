@@ -1,9 +1,15 @@
 interface Lightning {
+  master: string[],
   breath: string;
   techniques: string[];
 }
 
 const lightning: Lightning = {
+  master: [
+    '我妻善逸',
+    '獪岳',
+    '桑島慈悟郎'
+  ],
   breath: '雷',
   techniques: [
     '壱ノ型:霹靂一閃',

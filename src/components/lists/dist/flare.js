@@ -1,6 +1,10 @@
 "use strict";
 exports.__esModule = true;
 var flare = {
+    master: [
+        '煉獄杏寿郎',
+        '煉獄槇寿郎',
+    ],
     breath: '炎',
     techniques: [
         '壱ノ型:不知火',

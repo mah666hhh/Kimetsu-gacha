@@ -1,9 +1,14 @@
 interface Flower {
+  master: string[],
   breath: string,
   techniques: string[],
 }
 
 const flower: Flower = {
+  master: [
+    '胡蝶カナエ',
+    '栗花落カナヲ'
+  ],
   breath: '花',
   techniques: [
     '弐ノ型:御影梅',

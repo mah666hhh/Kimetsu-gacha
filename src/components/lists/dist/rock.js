@@ -1,6 +1,9 @@
 "use strict";
 exports.__esModule = true;
 var rock = {
+    master: [
+        '悲鳴嶼行冥'
+    ],
     breath: '岩',
     techniques: [
         '壱ノ型:蛇紋岩・双極',

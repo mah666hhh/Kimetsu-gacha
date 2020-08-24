@@ -1,6 +1,9 @@
 "use strict";
 exports.__esModule = true;
 var beast = {
+    master: [
+        '嘴平伊之助'
+    ],
     breath: '獣',
     techniques: [
         '壱ノ牙:穿ち抜き',

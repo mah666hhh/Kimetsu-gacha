@@ -1,9 +1,13 @@
 interface Moon {
+  master: string[],
   breath: string,
   techniques: string[],
 }
 
 const moon: Moon = {
+  master: [
+    '黒死牟'
+  ],
   breath: '月',
   techniques: [
     '壱ノ型:闇月・宵の宮',

@@ -127,7 +127,13 @@ class KimetsuTop extends Component<{}, Kimetsu> {
       ).split(':');
 
       // ヒノカミ神楽の場合は、型は表示しない
-      let str: string = `今日の私の呼吸は...%0a%0a「全集中！${selectedTechnique.breath !== '日' ? `${selectedTechnique.breath}の呼吸...」%0a%0a「${numberOfType}！」` : '」%0a%0a「ヒノカミ神楽！」'} %0a%0a「${technique}！！！」`;
+      let str: string = `今日の私の呼吸は...%0a%0a「全集中！${
+        selectedTechnique.breath !== '日'
+          ? `${selectedTechnique.breath}の呼吸...」%0a%0a「${numberOfType}！」`
+          : `」%0a%0a「${selectedTechnique.breath}！」`
+      } %0a%0a「${technique}！！！」%0a%0a (${
+        selectedTechnique.breath
+      }の呼吸の使い手は、${selectedTechnique.master})`;
 
       const appUrl: string = 'https://kimetsu-gacha.firebaseapp.com/';
 

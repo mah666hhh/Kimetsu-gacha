@@ -1,13 +1,14 @@
-// TODO: 日の呼吸はXXXノ型 がないので呼び出し時には注意
-// https://oyakudachi2525.com/2020/02/21/hinokokyu/
-
 interface Sun {
+  master: string[],
   breath: string;
   techniques: string[];
 }
 
 const sun: Sun = {
-  breath: '日',
+  master: [
+    '竈門炭治郎'
+  ],
+  breath: 'ヒノカミ神楽',
   techniques: [
     '壱ノ型:円舞',
     '弐ノ型:碧羅の天',

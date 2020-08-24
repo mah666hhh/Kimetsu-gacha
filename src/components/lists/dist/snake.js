@@ -1,6 +1,9 @@
 "use strict";
 exports.__esModule = true;
 var snake = {
+    master: [
+        '伊黒小芭内'
+    ],
     breath: '蛇',
     techniques: [
         '壱ノ型:委蛇斬り',

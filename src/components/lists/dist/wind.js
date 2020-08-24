@@ -1,6 +1,9 @@
 "use strict";
 exports.__esModule = true;
 var wind = {
+    master: [
+        '不死川実弥'
+    ],
     breath: '風',
     techniques: [
         '壱ノ型:塵旋風・削ぎ',

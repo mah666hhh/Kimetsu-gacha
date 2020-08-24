@@ -1,9 +1,13 @@
 interface Love {
+  master: string[],
   breath: string;
   techniques: string[];
 }
 
 const love: Love = {
+  master: [
+    '甘露寺蜜璃'
+  ],
   breath: '恋',
   techniques: [
     '壱ノ型:初恋のわななき',
